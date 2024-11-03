@@ -16,9 +16,6 @@
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
----
-include:
-  - board: nrf52840_m2
-    shield: tbk_mini_left
-  - board: nrf52840_m2
-    shield: tbk_mini_right
+
+board: [ "nrf52840_m2" ]
+shield: [ "tbkmini_left", "tbkmini_right" ]
