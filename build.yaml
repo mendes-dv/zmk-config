@@ -19,12 +19,3 @@
 
 board: [ "nrf52840_m2" ]
 shield: [ "tbkmini_left", "tbkmini_right" ]
-include:
-  - board: nrf52840_m2
-    shield: tbkmini_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-    artifact-name: tbkmini_left_with_logging
-  - board: nrf52840_m2
-    shield: tbkmini_right
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-    artifact-name: tbkmini_right_with_logging
