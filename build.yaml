@@ -19,6 +19,6 @@
 ---
 include:
   - board: nrf52840_m2
-    shield: corne_left
+    shield: tbk_mini_left
   - board: nrf52840_m2
-    shield: corne_right
+    shield: tbk_mini_right
