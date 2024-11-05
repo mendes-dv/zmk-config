@@ -6,21 +6,13 @@
 
 #include "tbkmini.dtsi"
 
-&default_transform {
-	col-offset = <6>;
-};
-
-&skeletyl_transform {
-	col-offset = <6>;
-};
-
 &kscan0 {
 	col-gpios
-		= <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		= <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
 };
