@@ -11,11 +11,3 @@ config SHIELD_TBKMINI_LEFT
 config SHIELD_TBKMINI_RIGHT
     def_bool $(shields_list_contains,tbkmini_right)
         select SHIELD_TBKMINI
-
-config SHIELD_TBKMINI_ADAPTERV2_LEFT
-	def_bool $(shields_list_contains,tbkmini_adapterv2_left)
-	select SHIELD_TBKMINI
-
-config SHIELD_TBKMINI_ADAPTERV2_RIGHT
-	def_bool $(shields_list_contains,tbkmini_adapterv2_right)
-	select SHIELD_TBKMINI
