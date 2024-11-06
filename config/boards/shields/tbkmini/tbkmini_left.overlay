@@ -1,10 +1,3 @@
-
-/*
- * Copyright (c) 2021 Casey Webster
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "tbkmini.dtsi"
 
 &kscan0 {
