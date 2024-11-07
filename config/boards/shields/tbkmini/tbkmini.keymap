@@ -20,20 +20,6 @@
   continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
 
-&behaviors {
-  hm: homerow_mods {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOMEROW_MODS";
-    bindings = <&kp>, <&kp>;
-  };
-  u_caps_word: u_caps_word {
-    compatible = "zmk,behavior-mod-morph";
-    label = "u_caps_word";
-    bindings = <&caps_word>, <&kp CAPS>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-};
-
 &keymap {
   chosen {
     zmk,matrix_transform = &skeletyl_transform;
