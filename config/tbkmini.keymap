@@ -49,58 +49,58 @@
 
         default_layer {
             bindings = <
-	&kp Q      &kp W        &kp F          &kp P       &kp B          &kp J  &kp L        &kp U        &kp Y       &kp SQT
-	&hm LGUI A &hm LALT R   &hm LCTRL S    &hm LSHFT T &kp G          &kp M  &hm RSHFT N  &hm RCTRL E  &hm LALT I  &hm RGUI O
-	&kp Z      &kp X        &kp C          &kp D       &kp V          &kp K  &kp H        &kp COMMA    &kp DOT     &kp FSLH
-	           &lt MSE ESC  &lt NAV SPACE  &lt MED TAB                       &lt FUN RET  &lt NUM BSPC &lt SYM DEL
+                &kp ESC    &kp Q       &kp W         &kp E       &kp R         &kp T     &kp Y         &kp U         &kp I       &kp O       &kp P      &kp BSPC
+                &kp TAB    &hm LGUI A  &hm LALT S    &hm LCTRL D &hm LSHFT F   &kp G     &kp H         &hm RSHFT J   &hm RCTRL K &hm LALT L  &hm RGUI SCLN &kp QUOT
+                &kp LSFT   &kp Z       &kp X         &kp C       &kp V         &kp B     &kp N         &kp M         &kp COMMA   &kp DOT     &kp SLASH  &kp RSFT
+                               &kp LCTRL  &lt NAV SPACE  &lt NUM RET           &lt SYM BSPC &kp DEL      &kp RALT
             >;
         };
         num_layer {
             bindings = <
-	&kp RBKT   &kp N7     &kp N8      &kp N9      &kp LBKT       &kp K_LOCK &trans    &trans    &trans   &sys_reset
-	&kp SEMI   &kp N4     &kp N5      &kp N6      &kp EQUAL      &trans     &kp RSHFT &kp RCTRL &kp LALT &kp RGUI
-	&kp GRAVE  &kp N1     &kp N2      &kp N3      &kp BSLH       &trans     &trans    &trans    &trans   &trans
-	           &kp DOT       &kp N0          &kp MINUS           &trans &trans &trans
+                &kp ESC    &kp N1      &kp N2        &kp N3      &kp N4        &kp N5    &kp N6        &kp N7        &kp N8      &kp N9      &kp N0     &kp MINUS
+                &kp TAB    &kp LBKT    &kp RBKT      &kp LCBR    &kp RCBR      &kp LT    &kp GT        &kp PLUS      &kp EQUAL   &kp ASTR    &kp FSLH   &kp PERC
+                &kp LSFT   &kp F10     &kp F1        &kp F2      &kp F3        &kp F4    &kp F5        &kp F6        &kp F7      &kp F8      &kp F9     &kp DOT
+                               &kp LCTRL  &kp DOT      &kp COMMA                 &kp BSPC      &kp RET       &kp DEL
             >;
         };
         sym_layer {
             bindings = <
-	&kp RBRC  &kp AMPS &kp STAR  &kp LPAR  &kp LBRC        &kp K_LOCK &trans  &trans     &trans   &sys_reset
-	&kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS        &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
-	&kp TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE        &trans &trans  &trans &trans &trans
-	                  &kp LPAR  &kp RPAR   &kp UNDER              &trans &trans &trans
+                &kp ESC    &kp EXCL    &kp AT        &kp HASH    &kp DLLR      &kp PRCNT &kp CIRC      &kp AMPS      &kp STAR    &kp LPAR    &kp RPAR   &kp PLUS
+                &kp TAB    &kp TILDE   &kp PIPE      &kp UNDER   &kp PLUS      &kp LCBR  &kp RCBR      &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT  &kp EQ
+                &kp LSFT   &kp LBRC    &kp RBRC      &kp LPRN    &kp RPRN      &kp COLON &kp SCLN      &kp DQT       &kp SQT     &kp BSLASH  &kp GRAVE  &kp GT
+                               &kp LCTRL  &trans       &trans                     &trans        &trans       &trans
             >;
         };
         fun_layer {
             bindings = <
-	&kp F12 &kp F7 &kp F8 &kp F9 &kp SYSREQ        &kp K_LOCK &trans  &trans     &trans   &bootloader
-	&kp F11 &kp F4 &kp F5 &kp F6 &kp PRINTSCREEN   &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
-	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &trans
-	                  &kp K_APP   &kp SPACE   &kp TAB     &trans &trans &trans
+                &kp ESC    &kp F12     &kp F7        &kp F8      &kp F9        &kp PRINT &kp SYSREQ    &kp CAPS      &kp PSCR    &kp SCROLL  &kp PAUSE  &kp INS
+                &kp TAB    &kp F11     &kp F4        &kp F5      &kp F6        &kp INSERT &kp DELETE    &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT  &kp PGUP
+                &kp LSFT   &kp F10     &kp F1        &kp F2      &kp F3        &kp GRAVE  &kp TILDE     &kp TAB       &kp RET     &kp BSPC    &kp LPRN   &kp RPRN
+                               &kp LCTRL  &trans       &trans                     &trans        &trans       &trans
             >;
         };
         nav_layer {
             bindings = <
-	&sys_reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &u_caps_word
-	&trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS
-	                  &trans   &trans   &trans                 &kp RET &kp BSPC &kp DEL
+                &kp ESC    &kp HOME    &kp PG_UP     &kp PG_DN   &kp END       &kp LEFT  &kp RIGHT     &kp UP        &kp DOWN    &kp INS     &kp DEL    &kp BKSP
+                &kp TAB    &kp LGUI    &kp LALT      &kp LCTRL   &kp LSHFT     &kp ESC   &kp TAB       &kp CAPS      &kp PSCR    &kp PAUSE   &kp BKSP   &kp RET
+                &kp LSFT   &kp LBRC    &kp RBRC      &kp LPRN    &kp RPRN      &kp LCBR  &kp RCBR      &kp LT        &kp GT      &kp EQ      &kp PLUS   &kp DOT
+                               &kp LCTRL  &trans       &trans                     &trans        &trans       &trans
             >;
         };
         mse_layer {
             bindings = <
-	&sys_reset   &trans   &trans    &trans     &kp K_LOCK   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &trans &trans &trans &trans
-	&trans   &trans   &trans    &trans     &trans       &trans &trans &trans &trans &bt BT_CLR
-	                  &trans   &trans   &trans                 &trans &trans &trans
+                &kp ESC    &kp MS_L    &kp MS_D      &kp MS_U    &kp MS_R      &kp WH_L  &kp WH_R      &kp WH_U      &kp WH_D    &kp MS_BTN1 &kp MS_BTN2 &kp MS_BTN3
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR &kp MS_BTN4 &kp MS_BTN5 &kp MS_BTN6 &kp MS_BTN7 &kp MS_BTN8 &trans
+                &kp LSFT   &kp GRAVE    &kp TILDE     &kp LCBR    &kp RCBR      &kp LT    &kp GT        &kp LPRN      &kp RPRN    &kp UNDERS  &kp PIPE    &trans
+                               &kp LCTRL  &trans       &trans                     &trans        &trans       &trans
             >;
         };
         med_layer {
             bindings = <
-	&bootloader   &trans   &trans    &trans     &kp K_LOCK   &trans &trans     &trans       &trans       &trans
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT
-	&trans   &trans   &trans    &trans     &trans       &trans &trans     &trans       &trans       &trans
-	                  &trans   &trans   &trans                 &kp K_STOP2 &kp K_PP &kp K_MUTE
+                &kp ESC    &kp K_VOL_DN &kp K_VOL_UP &kp K_MUTE  &kp K_PP       &kp K_NEXT &kp K_PREV    &kp K_STOP    &kp K_EJCT  &kp INS     &kp HOME   &kp PG_UP
+                &kp TAB    &kp K_STOP2  &kp K_VOL_DN &kp K_VOL_UP &kp K_MUTE     &trans     &trans        &kp INS       &kp HOME    &kp PG_UP   &kp END    &trans
+                &kp LSFT   &kp F1       &kp F2       &kp F3       &kp F4         &kp F5     &kp F6        &kp F7        &kp F8      &kp F9      &kp F10    &trans
+                               &kp LCTRL  &trans       &trans                     &trans        &trans       &trans
             >;
         };
     };
