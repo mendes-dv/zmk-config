@@ -18,7 +18,7 @@
 #
 
 include:
-  - board: nice_nano_v2
+  - board: nrfmicro_13
     shield: tbkmini_left
-  - board: nice_nano_v2
+  - board: nrfmicro_13 
     shield: tbkmini_right
