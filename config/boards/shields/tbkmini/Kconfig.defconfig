@@ -6,12 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
-config ZMK_BLE
-    default y
-
-config ZMK_SPLIT
-    default y
-
 endif
 
 if SHIELD_TBKMINI_RIGHT
@@ -21,9 +15,9 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_BLE_ROLE_PERIPHERAL
     default y
+endif
 
-config ZMK_BLE
-    default y
+if SHIELD_TBKMINI_LEFT || SHIELD_TBKMINI_RIGHT
 
 config ZMK_SPLIT
     default y
