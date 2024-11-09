@@ -6,14 +6,11 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
     
-config ZMK_SPLIT_USB
-    default y
-
 endif
 
 if SHIELD_TBKMINI_LEFT || SHIELD_TBKMINI_RIGHT
 
-config ZMK_SPLIT
+config ZMK_SPLIT_BLE
     default y
 
 endif
