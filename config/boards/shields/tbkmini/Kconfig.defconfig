@@ -1,16 +1,22 @@
 if SHIELD_TBKMINI_LEFT
 
-config ZMK_KEYBOARD_NAME
-    default "tbkmini"
+  config ZMK_KEYBOARD_NAME
+        default "Dactyl CC"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
-    
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_TBKMINI_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "Dactyl CC Right"
+
 endif
 
 if SHIELD_TBKMINI_LEFT || SHIELD_TBKMINI_RIGHT
 
-config ZMK_SPLIT_BLE
-    default y
+    config ZMK_SPLIT
+        default y
 
 endif
