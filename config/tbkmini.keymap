@@ -9,6 +9,32 @@
 #define bluetooth           3
 
 / {
+    behaviors {
+        home_row_left: home_row_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+        };
+
+        home_row_right: home_row_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -47,7 +73,7 @@
 
         bluetooth {
             bindings = <
-&bt BT_CLR	    &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans  &trans       &trans  &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans  &trans       &trans  &trans
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_NXT  &bt BT_PRV  &trans  &trans       &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans  &bootloader  &trans  &sl default_layer
                                             &trans        &trans        &bt BT_CLR      &trans      &trans      &trans
