@@ -9,32 +9,6 @@
 #define bluetooth           3
 
 / {
-    behaviors {
-        home_row_left: home_row_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            hold-trigger-on-release;
-        };
-
-        home_row_right: home_row_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "tap-preferred";
-            hold-trigger-on-release;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
