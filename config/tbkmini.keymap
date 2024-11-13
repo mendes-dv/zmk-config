@@ -56,7 +56,7 @@
         arrows_and_mouse {
             bindings = <
 &trans  &trans            &mkp MB1           &trans         &mkp MB2         &trans        &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans            &mmv trans        &trans &trans &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans            &trans        &trans &trans &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
 &trans  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV       &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
                                              &trans           &trans           &trans        &trans          &mo bluetooth   &trans
             >;
