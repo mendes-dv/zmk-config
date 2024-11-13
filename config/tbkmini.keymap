@@ -17,9 +17,9 @@
             hold-trigger-on-release;
         };
 
-        home_row_left: home_row_left {
+        home_row_right: home_row_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_LEFT";
+            label = "HOME_ROW_RIGHT";
             bindings = <&none>, <&none>;
 
             #binding-cells = <2>;
