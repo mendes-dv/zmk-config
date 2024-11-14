@@ -33,6 +33,19 @@
             flavor = "tap-preferred";
             hold-trigger-on-release;
         };
+
+        function_layer: function_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUNCTION_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <16>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
     };
 
     keymap {
@@ -44,30 +57,30 @@
             // |  TAB  |  A  |  R  |  S   |  T   |  G   |    |  M   |  N   |  E  |  I  |  O  |   '  |
             // | SHIFT |  Z  |  X  |  C   |  D   |  V   |    |  K   |  H   |  ,  |  .  |  /  | CTRL |
             //                     | ESC  | SPC  | TAB  |    | RET  | BSPC | DEL |
-            
+
             bindings = <
-&kp ESC        &kp Q  &kp W  &kp E                          &kp R          &kp T        &kp Y    &kp U                  &kp I      &kp O    &kp P          &kp MINUS
-&kp LSHFT      &kp A  &kp S  &kp D                          &kp F          &kp G        &kp H    &kp J                  &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&mt LCTRL TAB  &kp Z  &kp X  &kp C                          &kp V          &kp B        &kp N    &kp M                  &kp COMMA  &kp DOT  &kp FSLH       &kp NON_US_BACKSLASH
-                             &lt arrows_and_mouse LEFT_WIN  &kp SPACE  &kp LEFT_ALT  &kp DEL &kp BACKSPACE  &lt symbols RET
+&kp ESC        &kp Q  &kp W  &kp E                          &kp R                &kp T           &kp Y    &kp U          &kp I            &kp O    &kp P          &kp MINUS
+&kp LSHFT      &kp A  &kp S  &kp D                          &function_layer 4 F  &kp G           &kp H    &kp J          &kp K            &kp L    &kp SEMICOLON  &kp SQT
+&mt LCTRL TAB  &kp Z  &kp X  &kp C                          &kp V                &kp B           &kp N    &kp M          &kp COMMA        &kp DOT  &kp FSLH       &kp NON_US_BACKSLASH
+                             &lt arrows_and_mouse LEFT_WIN  &kp SPACE            &kp LEFT_ALT    &kp DEL  &kp BACKSPACE  &lt symbols RET
             >;
         };
 
         arrows_and_mouse {
             bindings = <
-&trans  &trans            &mkp MB1           &trans         &mkp MB2         &trans        &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans            &trans        &trans &trans &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV       &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
-                                             &trans           &trans           &trans        &trans          &mo bluetooth   &trans
+&trans  &trans      &mkp MB1           &trans           &mkp MB2    &trans        &trans          &trans          &trans        &trans     &trans  &trans
+&trans  &trans      &trans             &trans           &trans      &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
+                                       &trans           &trans      &trans        &trans          &trans          &mo 3
             >;
         };
 
         symbols {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR     &kp PERCENT    &kp LCTRL  &kp AMPERSAND  &kp ASTERISK     &trans                &trans                 &kp GRAVE
-&trans  &kp N1           &kp N2       &kp N3    &kp N4         &kp N5         &kp HASH   &trans         &kp EQUAL        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NON_US_BACKSLASH
-&trans  &kp N6           &kp N7       &kp N8    &kp N9         &kp N0         &kp EQUAL  &kp PLUS       &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-                                      &trans    &mo bluetooth  &trans         &trans     &trans         &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp LCTRL  &kp AMPERSAND    &kp ASTERISK          &trans                 &trans       &kp GRAVE
+&trans  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5         &kp HASH   &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT  &kp NON_US_BACKSLASH
+&trans  &kp N6           &kp N7       &kp N8    &kp N9      &kp N0         &kp EQUAL  &kp PLUS         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN  &kp PIPE
+                                      &mo 3     &trans      &trans         &trans     &trans           &trans
             >;
         };
 
@@ -77,6 +90,15 @@
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_NXT  &bt BT_PRV  &trans  &trans       &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans  &bootloader  &trans  &sl default_layer
                                             &trans        &trans        &bt BT_CLR      &trans      &trans      &trans
+            >;
+        };
+
+        functions {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F1   &kp F2  &kp F3  &kp F4  &kp F5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F11  &trans  &trans  &trans  &kp F12  &trans
+                        &trans  &trans  &trans    &trans   &trans  &trans
             >;
         };
     };
