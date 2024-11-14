@@ -144,10 +144,10 @@
 
         i3 {
             bindings = <
-&trans  &trans            &trans            &trans            &trans            &trans        &kp LG(LEFT)  &trans     &trans     &kp LG(RIGHT)  &trans  &trans
-&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &kp LG(H)     &kp LG(J)  &kp LG(L)  &kp LG(L)      &trans  &trans
-&trans  &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(F)         &trans            &trans        &trans        &trans     &trans     &trans         &trans  &trans
-                                            &kp LEFT_GUI      &kp LG(SPACE)     &trans        &trans        &trans     &trans
+&trans  &trans            &trans            &trans            &trans            &trans        &kp LG(LEFT)      &kp LG(DOWN)      &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans  &trans
+&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)    &kp LG(H)         &kp LG(J)         &kp LG(L)         &kp LG(L)          &trans  &trans
+&trans  &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(F)         &trans            &trans        &kp LG(LS(LEFT))  &kp LG(LS(DOWN))  &kp LG(LS(DOWN))  &kp LG(LS(RIGHT))  &trans  &trans
+                                            &kp LEFT_GUI      &kp LG(SPACE)     &trans        &trans            &trans            &trans
             >;
         };
     };
