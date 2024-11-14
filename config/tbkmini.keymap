@@ -86,9 +86,9 @@
 
         arrows_and_mouse {
             bindings = <
-&trans  &trans      &mkp MB1           &trans           &mkp MB2    &trans        &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans      &trans             &trans           &trans      &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
+&trans  &msc SCRL_UP   &mkp MB1          &mmv MOVE_UP      &mkp MB2          &trans        &trans          &trans          &trans        &trans     &trans  &trans
+&trans  &msc SCRL_DOWN &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans        &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV        &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
                                        &trans           &trans      &trans        &trans          &trans          &mo 3
             >;
         };
