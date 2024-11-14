@@ -33,6 +33,19 @@
             flavor = "tap-preferred";
             hold-trigger-on-release;
         };
+
+        function_layer: function_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FUNCTION_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <16>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+        };
     };
 
     keymap {
@@ -46,10 +59,10 @@
             //                     | ESC  | SPC  | TAB  |    | RET  | BSPC | DEL |
 
             bindings = <
-&kp ESC        &kp Q  &kp W  &kp E                          &kp R      &kp T           &kp Y    &kp U          &kp I            &kp O    &kp P          &kp MINUS
-&kp LSHFT      &kp A  &kp S  &kp D                          &kp F      &kp G           &kp H    &kp J          &kp K            &kp L    &kp SEMICOLON  &kp SQT
-&mt LCTRL TAB  &kp Z  &kp X  &kp C                          &kp V      &kp B           &kp N    &kp M          &kp COMMA        &kp DOT  &kp FSLH       &kp NON_US_BACKSLASH
-                             &lt arrows_and_mouse LEFT_WIN  &kp SPACE  &kp LEFT_ALT    &kp DEL  &kp BACKSPACE  &lt symbols RET
+&kp ESC        &kp Q  &kp W  &kp E                          &kp R                &kp T           &kp Y    &kp U          &kp I            &kp O    &kp P          &kp MINUS
+&kp LSHFT      &kp A  &kp S  &kp D                          &function_layer 4 F  &kp G           &kp H    &kp J          &kp K            &kp L    &kp SEMICOLON  &kp SQT
+&mt LCTRL TAB  &kp Z  &kp X  &kp C                          &kp V                &kp B           &kp N    &kp M          &kp COMMA        &kp DOT  &kp FSLH       &kp NON_US_BACKSLASH
+                             &lt arrows_and_mouse LEFT_WIN  &kp SPACE            &kp LEFT_ALT    &kp DEL  &kp BACKSPACE  &lt symbols RET
             >;
         };
 
@@ -77,6 +90,15 @@
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_NXT  &bt BT_PRV  &trans  &trans       &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans          &trans      &trans      &trans  &bootloader  &trans  &sl default_layer
                                             &trans        &trans        &bt BT_CLR      &trans      &trans      &trans
+            >;
+        };
+
+        functions {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F1   &kp F2  &kp F3  &kp F4  &kp F5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp F11  &trans  &trans  &trans  &kp F12  &trans
+                        &trans  &trans  &trans    &trans   &trans  &trans
             >;
         };
     };
