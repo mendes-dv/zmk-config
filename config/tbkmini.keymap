@@ -1,16 +1,13 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-
 #define default_layer       0 // Default layer
 #define arrows_and_mouse    1
 #define symbols             2
 #define bluetooth           3
-
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
 &mmv {
@@ -24,7 +21,6 @@
     time-to-max-speed-ms = <40>;      // 300
     delay-ms = <0>;                   // 0
 };
-
 
 / {
     behaviors {
@@ -66,6 +62,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        screen1 {
+            bindings = <&kp LG(NUMBER_1)>;
+            key-positions = <36 30 13>;
+        };
+
+        screen2 {
+            bindings = <&kp LG(NUMBER_2)>;
+            key-positions = <36 30 14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,10 +96,10 @@
 
         arrows_and_mouse {
             bindings = <
-&trans  &msc SCRL_UP   &mkp MB1          &mmv MOVE_UP      &mkp MB2          &trans        &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &msc SCRL_DOWN &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &kp C_MUTE     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV        &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
-                                       &trans           &trans      &trans        &trans          &trans          &mo 3
+&trans  &msc SCRL_UP    &mkp MB1           &mmv MOVE_UP     &mkp MB2         &trans        &trans          &trans          &trans        &trans     &trans  &trans
+&trans  &msc SCRL_DOWN  &mmv MOVE_LEFT     &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV       &kp C_NEXT    &trans          &trans          &trans        &trans     &trans  &trans
+                                           &trans           &trans           &trans        &trans          &trans          &mo 3
             >;
         };
 
